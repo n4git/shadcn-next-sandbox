@@ -52,22 +52,42 @@ const data = {
   ],
   navMain: [
     {
-      title: "Playground",
+      title: "Examples",
       url: "#",
       icon: SquareTerminal,
       isActive: true,
       items: [
         {
-          title: "History",
-          url: "#",
+          title: "Dashboard",
+          url: "/admin/dashboard",
         },
         {
-          title: "Starred",
-          url: "#",
+          title: "Example",
+          url: "/admin/example",
         },
         {
-          title: "Settings",
-          url: "#",
+          title: "Mail",
+          url: "/admin/mail",
+        },
+        {
+          title: "Tasks",
+          url: "/admin/tasks",
+        },
+        {
+          title: "Playground",
+          url: "/admin/playground",
+        },
+        {
+          title: "Forms",
+          url: "/admin/forms",
+        },
+        {
+          title: "Music",
+          url: "/admin/music",
+        },
+        {
+          title: "Cards",
+          url: "/admin/cards",
         },
       ],
     },

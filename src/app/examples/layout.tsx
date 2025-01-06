@@ -1,14 +1,7 @@
 import { Metadata } from "next"
 import Link from "next/link"
 
-import { Announcement } from "@/components/announcement"
 import { ExamplesNav } from "@/components/examples-nav"
-import {
-  PageActions,
-  PageHeader,
-  PageHeaderDescription,
-  PageHeaderHeading,
-} from "@/components/page-header"
 import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
@@ -23,22 +16,6 @@ export default function ExamplesLayout({
 }) {
   return (
     <>
-      <PageHeader>
-        <Announcement />
-        <PageHeaderHeading>Build your component library</PageHeaderHeading>
-        <PageHeaderDescription>
-          Beautifully designed components that you can copy and paste into your
-          apps. Made with Tailwind CSS. Open source.
-        </PageHeaderDescription>
-        <PageActions>
-          <Button asChild size="sm">
-            <Link href="/docs">Get Started</Link>
-          </Button>
-          <Button asChild size="sm" variant="ghost">
-            <Link href="/blocks">Browse Blocks</Link>
-          </Button>
-        </PageActions>
-      </PageHeader>
       <div className="border-grid border-b">
         <div className="container-wrapper">
           <div className="container py-4">
@@ -47,7 +24,7 @@ export default function ExamplesLayout({
         </div>
       </div>
       <div className="container-wrapper">
-        <div className="container py-6">
+        <div className="container p-8">
           <section className="overflow-hidden rounded-[0.5rem] border bg-background shadow">
             {children}
           </section>
