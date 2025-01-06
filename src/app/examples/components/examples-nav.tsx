@@ -36,10 +36,6 @@ const examples = [
     name: "Authentication",
     href: "/examples/authentication",
   },
-  {
-    name: "Admin",
-    href: "/admin/dashboard",
-  },
 ]
 
 interface ExamplesNavProps extends React.HTMLAttributes<HTMLDivElement> {}
@@ -63,6 +59,21 @@ export function ExamplesNav({ className, ...props }: ExamplesNavProps) {
             />
           ))}
           <div className="flex-grow"></div>
+          <ExampleLink
+            key="/"
+            example={{ name: "/", href: "/" }}
+            isActive={false}
+          />
+          <ExampleLink
+            key="/sidebar-07"
+            example={{ name: "/sidebar-07", href: "/sidebar-07" }}
+            isActive={false}
+          />
+          <ExampleLink
+            key="/admin"
+            example={{ name: "/admin", href: "/admin" }}
+            isActive={false}
+          />
           <ThemeSwitch />
         </div>
         <ScrollBar orientation="horizontal" className="invisible" />
