@@ -1,5 +1,4 @@
 import { Metadata } from "next"
-import Image from "next/image"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -22,6 +21,7 @@ import { RecentSales } from "./components/recent-sales"
 import { Search } from "./components/search"
 import TeamSwitcher from "./components/team-switcher"
 import { UserNav } from "./components/user-nav"
+import { ThemeSwitch } from "@/components/theme-switch"
 
 export const metadata: Metadata = {
   title: "Dashboard",
@@ -37,6 +37,7 @@ export default function DashboardPage() {
           <MainNav className="mx-6" />
           <div className="ml-auto flex items-center space-x-4">
             <Search />
+            <ThemeSwitch />
             <UserNav />
           </div>
         </div>

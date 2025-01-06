@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation"
 
 import { cn } from "@/lib/utils"
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
+import { ThemeSwitch } from "@/components/theme-switch"
 
 const examples = [
   {
@@ -61,6 +62,8 @@ export function ExamplesNav({ className, ...props }: ExamplesNavProps) {
               isActive={pathname?.startsWith(example.href) ?? false}
             />
           ))}
+          <div className="flex-grow"></div>
+          <ThemeSwitch />
         </div>
         <ScrollBar orientation="horizontal" className="invisible" />
       </ScrollArea>

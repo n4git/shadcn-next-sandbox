@@ -1,7 +1,9 @@
+import { ThemeProvider } from "@/context/theme-context";
 import "@/styles/globals.css";
 
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { StrictMode } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +29,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <StrictMode>
+          <ThemeProvider defaultTheme='light' storageKey='ui-theme'>
+            {children}
+          </ThemeProvider>
+        </StrictMode>
       </body>
     </html>
   );

@@ -1,3 +1,4 @@
+import { ThemeSwitch } from "@/components/theme-switch";
 import Link from "next/link";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
           >
             admin/dashboard
           </Link>
+          <ThemeSwitch />
         </div>
       </main>
     </div>
