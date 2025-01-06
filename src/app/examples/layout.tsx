@@ -1,8 +1,6 @@
 import { Metadata } from "next"
-import Link from "next/link"
 
-import { ExamplesNav } from "@/components/examples-nav"
-import { Button } from "@/components/ui/button"
+import { ExamplesNav } from "@/app/examples/components/examples-nav"
 
 export const metadata: Metadata = {
   title: "Examples",
