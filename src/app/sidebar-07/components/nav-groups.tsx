@@ -1,6 +1,6 @@
 "use client"
 
-import { ChevronRight } from "lucide-react"
+import { ChevronRight, type LucideIcon } from "lucide-react"
 
 import {
   Collapsible,
@@ -19,33 +19,33 @@ import {
 } from "@/components/ui/sidebar"
 import { NavGroup } from "./layout/types"
 
-export function NavMain({
-  navGroups,
+export function NavGroups({
+  groups,
 }: {
-  navGroups: NavGroup[]
+  groups: NavGroup[]
 }) {
   return (
     <SidebarGroup>
       <SidebarGroupLabel>Platform</SidebarGroupLabel>
       <SidebarMenu>
-        {navGroups.map((navGroup) => (
+        {groups.map((group) => (
           <Collapsible
-            key={navGroup.title}
+            key={group.title}
             asChild
-            defaultOpen={navGroup.isActive}
+            defaultOpen={group.isActive}
             className="group/collapsible"
           >
             <SidebarMenuItem>
               <CollapsibleTrigger asChild>
-                <SidebarMenuButton tooltip={navGroup.title}>
-                  {navGroup.icon && <navGroup.icon />}
-                  <span>{navGroup.title}</span>
+                <SidebarMenuButton tooltip={group.title}>
+                  {group.icon && <group.icon />}
+                  <span>{group.title}</span>
                   <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
                 </SidebarMenuButton>
               </CollapsibleTrigger>
               <CollapsibleContent>
                 <SidebarMenuSub>
-                  {navGroup.items?.map((item) => (
+                  {group.items?.map((item) => (
                     <SidebarMenuSubItem key={item.title}>
                       <SidebarMenuSubButton asChild>
                         <a href={item.url}>

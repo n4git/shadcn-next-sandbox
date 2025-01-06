@@ -28,42 +28,22 @@ export const sidebarData: SidebarData = {
   ],
   navGroups: [
     {
-      title: "Examples",
+      title: "Playground",
       url: "#",
       icon: SquareTerminal,
       isActive: true,
       items: [
         {
-          title: "Dashboard",
-          url: "/admin/dashboard",
+          title: "History",
+          url: "#",
         },
         {
-          title: "Example",
-          url: "/admin/example",
+          title: "Starred",
+          url: "#",
         },
         {
-          title: "Mail",
-          url: "/admin/mail",
-        },
-        {
-          title: "Tasks",
-          url: "/admin/tasks",
-        },
-        {
-          title: "Playground",
-          url: "/admin/playground",
-        },
-        {
-          title: "Forms",
-          url: "/admin/forms",
-        },
-        {
-          title: "Music",
-          url: "/admin/music",
-        },
-        {
-          title: "Cards",
-          url: "/admin/cards",
+          title: "Settings",
+          url: "#",
         },
       ],
     },
