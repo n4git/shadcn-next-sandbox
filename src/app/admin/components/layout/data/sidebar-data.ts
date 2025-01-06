@@ -1,186 +1,153 @@
 'use client'
 
-import {
-  IconBarrierBlock,
-  IconBrowserCheck,
-  IconBug,
-  IconChecklist,
-  IconError404,
-  IconHelp,
-  IconLayoutDashboard,
-  IconLock,
-  IconLockAccess,
-  IconMessages,
-  IconNotification,
-  IconPackages,
-  IconPalette,
-  IconServerOff,
-  IconSettings,
-  IconTool,
-  IconUserCog,
-  IconUserOff,
-  IconUsers,
-} from '@tabler/icons-react'
-import { AudioWaveform, Command, GalleryVerticalEnd } from 'lucide-react'
+import { AudioWaveform, BookOpen, Bot, Command, Frame, GalleryVerticalEnd, Map, PieChart, Settings2, SquareTerminal } from 'lucide-react'
 import { type SidebarData } from '../types'
 
 export const sidebarData: SidebarData = {
   user: {
-    name: 'satnaing',
-    email: 'satnaingdev@gmail.com',
-    avatar: '/avatars/shadcn.jpg',
+    name: "shadcn",
+    email: "m@example.com",
+    avatar: "/avatars/shadcn.jpg",
   },
   teams: [
     {
-      name: 'Shadcn Admin',
-      logo: Command,
-      plan: 'Next.js + ShadcnUI',
-    },
-    {
-      name: 'Acme Inc',
+      name: "Acme Inc",
       logo: GalleryVerticalEnd,
-      plan: 'Enterprise',
+      plan: "Enterprise",
     },
     {
-      name: 'Acme Corp.',
+      name: "Acme Corp.",
       logo: AudioWaveform,
-      plan: 'Startup',
+      plan: "Startup",
+    },
+    {
+      name: "Evil Corp.",
+      logo: Command,
+      plan: "Free",
     },
   ],
   navGroups: [
     {
-      title: 'General',
+      title: "Examples",
+      url: "#",
+      icon: SquareTerminal,
+      isActive: true,
       items: [
         {
-          title: 'Dashboard',
-          url: '/',
-          icon: IconLayoutDashboard,
+          title: "Dashboard",
+          url: "/admin/dashboard",
         },
         {
-          title: 'Tasks',
-          url: '/tasks',
-          icon: IconChecklist,
+          title: "Example",
+          url: "/admin/example",
         },
         {
-          title: 'Apps',
-          url: '/apps',
-          icon: IconPackages,
+          title: "Mail",
+          url: "/admin/mail",
         },
         {
-          title: 'Chats',
-          url: '/chats',
-          badge: '3',
-          icon: IconMessages,
+          title: "Tasks",
+          url: "/admin/tasks",
         },
         {
-          title: 'Users',
-          url: '/users',
-          icon: IconUsers,
+          title: "Playground",
+          url: "/admin/playground",
+        },
+        {
+          title: "Forms",
+          url: "/admin/forms",
+        },
+        {
+          title: "Music",
+          url: "/admin/music",
+        },
+        {
+          title: "Cards",
+          url: "/admin/cards",
         },
       ],
     },
     {
-      title: 'Pages',
+      title: "Models",
+      url: "#",
+      icon: Bot,
       items: [
         {
-          title: 'Auth',
-          icon: IconLockAccess,
-          items: [
-            {
-              title: 'Sign In',
-              url: '/auth/sign-in',
-            },
-            {
-              title: 'Sign In (2 Col)',
-              url: '/auth/sign-in-2',
-            },
-            {
-              title: 'Sign Up',
-              url: '/auth/sign-up',
-            },
-            {
-              title: 'Forgot Password',
-              url: '/auth/forgot-password',
-            },
-            {
-              title: 'OTP',
-              url: '/auth/otp',
-            },
-          ],
+          title: "Genesis",
+          url: "#",
         },
         {
-          title: 'Errors',
-          icon: IconBug,
-          items: [
-            {
-              title: 'Unauthorized',
-              url: '/errors/401',
-              icon: IconLock,
-            },
-            {
-              title: 'Forbidden',
-              url: '/errors/403',
-              icon: IconUserOff,
-            },
-            {
-              title: 'Not Found',
-              url: '/errors/404',
-              icon: IconError404,
-            },
-            {
-              title: 'Internal Server Error',
-              url: '/errors/500',
-              icon: IconServerOff,
-            },
-            {
-              title: 'Maintenance Error',
-              url: '/errors/503',
-              icon: IconBarrierBlock,
-            },
-          ],
+          title: "Explorer",
+          url: "#",
+        },
+        {
+          title: "Quantum",
+          url: "#",
         },
       ],
     },
     {
-      title: 'Other',
+      title: "Documentation",
+      url: "#",
+      icon: BookOpen,
       items: [
         {
-          title: 'Settings',
-          icon: IconSettings,
-          items: [
-            {
-              title: 'Profile',
-              url: '/settings',
-              icon: IconUserCog,
-            },
-            {
-              title: 'Account',
-              url: '/settings/account',
-              icon: IconTool,
-            },
-            {
-              title: 'Appearance',
-              url: '/settings/appearance',
-              icon: IconPalette,
-            },
-            {
-              title: 'Notifications',
-              url: '/settings/notifications',
-              icon: IconNotification,
-            },
-            {
-              title: 'Display',
-              url: '/settings/display',
-              icon: IconBrowserCheck,
-            },
-          ],
+          title: "Introduction",
+          url: "#",
         },
         {
-          title: 'Help Center',
-          url: '/help-center',
-          icon: IconHelp,
+          title: "Get Started",
+          url: "#",
+        },
+        {
+          title: "Tutorials",
+          url: "#",
+        },
+        {
+          title: "Changelog",
+          url: "#",
         },
       ],
+    },
+    {
+      title: "Settings",
+      url: "#",
+      icon: Settings2,
+      items: [
+        {
+          title: "General",
+          url: "#",
+        },
+        {
+          title: "Team",
+          url: "#",
+        },
+        {
+          title: "Billing",
+          url: "#",
+        },
+        {
+          title: "Limits",
+          url: "#",
+        },
+      ],
+    },
+  ],
+  projects: [
+    {
+      name: "Design Engineering",
+      url: "#",
+      icon: Frame,
+    },
+    {
+      name: "Sales & Marketing",
+      url: "#",
+      icon: PieChart,
+    },
+    {
+      name: "Travel",
+      url: "#",
+      icon: Map,
     },
   ],
 }

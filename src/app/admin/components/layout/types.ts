@@ -30,13 +30,23 @@ type NavItem = NavCollapsible | NavLink
 
 interface NavGroup {
   title: string
-  items: NavItem[]
+  url: string,
+  icon: React.ElementType,
+  isActive?: boolean,
+  items: NavItem[],
+}
+
+interface NavProject {
+  name: string
+  url: string,
+  icon: React.ElementType,
 }
 
 interface SidebarData {
   user: User
   teams: Team[]
   navGroups: NavGroup[]
+  projects: NavProject[]
 }
 
-export type { SidebarData, NavGroup, NavItem, NavCollapsible, NavLink }
+export type { SidebarData, NavGroup, NavProject, NavItem, NavCollapsible, NavLink }
