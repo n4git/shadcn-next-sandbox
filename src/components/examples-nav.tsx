@@ -61,8 +61,8 @@ export function ExamplesNav({ className, ...props }: ExamplesNavProps) {
       <ScrollArea className="max-w-[600px] lg:max-w-none">
         <div className={cn("flex items-center", className)} {...props}>
           <ExampleLink
-            example={{ name: "Examples", href: "/", code: "", hidden: false }}
-            isActive={pathname === "/"}
+            example={{ name: "Examples", href: "/examples", code: "", hidden: false }}
+            isActive={pathname === "/examples"}
           />
           {examples.map((example) => (
             <ExampleLink
