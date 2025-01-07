@@ -40,7 +40,7 @@ export default async function TaskPage() {
           <UserNav />
         </div>
       </div>
-      <DataTable data={tasks} columns={columns} />
+      <DataTable columns={columns} data={tasks} />
     </div>
   )
 }

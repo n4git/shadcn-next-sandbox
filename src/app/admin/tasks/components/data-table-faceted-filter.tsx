@@ -31,11 +31,7 @@ interface DataTableFacetedFilterProps<TData, TValue> {
   }[]
 }
 
-export function DataTableFacetedFilter<TData, TValue>({
-  column,
-  title,
-  options,
-}: DataTableFacetedFilterProps<TData, TValue>) {
+export function DataTableFacetedFilter<TData, TValue>({ column, title, options }: DataTableFacetedFilterProps<TData, TValue>) {
   const facets = column?.getFacetedUniqueValues()
   const selectedValues = new Set(column?.getFilterValue() as string[])
 
@@ -88,6 +84,7 @@ export function DataTableFacetedFilter<TData, TValue>({
             <CommandGroup>
               {options.map((option) => {
                 const isSelected = selectedValues.has(option.value)
+                
                 return (
                   <CommandItem
                     key={option.value}
@@ -98,9 +95,7 @@ export function DataTableFacetedFilter<TData, TValue>({
                         selectedValues.add(option.value)
                       }
                       const filterValues = Array.from(selectedValues)
-                      column?.setFilterValue(
-                        filterValues.length ? filterValues : undefined
-                      )
+                      column?.setFilterValue(filterValues.length ? filterValues : undefined)
                     }}
                   >
                     <div
@@ -113,9 +108,7 @@ export function DataTableFacetedFilter<TData, TValue>({
                     >
                       <Check />
                     </div>
-                    {option.icon && (
-                      <option.icon className="mr-2 h-4 w-4 text-muted-foreground" />
-                    )}
+                    {option.icon && (<option.icon className="mr-2 h-4 w-4 text-muted-foreground" />)}
                     <span>{option.label}</span>
                     {facets?.get(option.value) && (
                       <span className="ml-auto flex h-4 w-4 items-center justify-center font-mono text-xs">
