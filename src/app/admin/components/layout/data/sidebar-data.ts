@@ -9,145 +9,109 @@ export const sidebarData: SidebarData = {
     email: "m@example.com",
     avatar: "/avatars/shadcn.jpg",
   },
-  teams: [
-    {
-      name: "Acme Inc",
-      logo: GalleryVerticalEnd,
-      plan: "Enterprise",
-    },
-    {
-      name: "Acme Corp.",
-      logo: AudioWaveform,
-      plan: "Startup",
-    },
-    {
-      name: "Evil Corp.",
-      logo: Command,
-      plan: "Free",
-    },
-  ],
-  navGroups: [
-    {
-      title: "Examples",
+  teams: [{
+    name: "Acme Inc",
+    logo: GalleryVerticalEnd,
+    plan: "Enterprise",
+  }, {
+    name: "Acme Corp.",
+    logo: AudioWaveform,
+    plan: "Startup",
+  }, {
+    name: "Evil Corp.",
+    logo: Command,
+    plan: "Free",
+  }],
+  navGroups: [{
+    title: "Examples",
+    url: "#",
+    icon: SquareTerminal,
+    isActive: true,
+    items: [{
+      title: "Dashboard",
+      url: "/admin/dashboard",
+    }, {
+      title: "Example",
+      url: "/admin/example",
+    }, {
+      title: "Mail",
+      url: "/admin/mail",
+    }, {
+      title: "Tasks",
+      url: "/admin/tasks",
+    }, {
+      title: "Playground",
+      url: "/admin/playground",
+    }, {
+      title: "Forms",
+      url: "/admin/forms",
+    }, {
+      title: "Music",
+      url: "/admin/music",
+    }, {
+      title: "Cards",
+      url: "/admin/cards",
+    }],
+  }, {
+    title: "Models",
+    url: "#",
+    icon: Bot,
+    items: [{
+      title: "Genesis",
       url: "#",
-      icon: SquareTerminal,
-      isActive: true,
-      items: [
-        {
-          title: "Dashboard",
-          url: "/admin/dashboard",
-        },
-        {
-          title: "Example",
-          url: "/admin/example",
-        },
-        {
-          title: "Mail",
-          url: "/admin/mail",
-        },
-        {
-          title: "Tasks",
-          url: "/admin/tasks",
-        },
-        {
-          title: "Playground",
-          url: "/admin/playground",
-        },
-        {
-          title: "Forms",
-          url: "/admin/forms",
-        },
-        {
-          title: "Music",
-          url: "/admin/music",
-        },
-        {
-          title: "Cards",
-          url: "/admin/cards",
-        },
-      ],
-    },
-    {
-      title: "Models",
+    }, {
+      title: "Explorer",
       url: "#",
-      icon: Bot,
-      items: [
-        {
-          title: "Genesis",
-          url: "#",
-        },
-        {
-          title: "Explorer",
-          url: "#",
-        },
-        {
-          title: "Quantum",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Documentation",
+    }, {
+      title: "Quantum",
       url: "#",
-      icon: BookOpen,
-      items: [
-        {
-          title: "Introduction",
-          url: "#",
-        },
-        {
-          title: "Get Started",
-          url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Settings",
+    }],
+  }, {
+    title: "Documentation",
+    url: "#",
+    icon: BookOpen,
+    items: [{
+      title: "Introduction",
       url: "#",
-      icon: Settings2,
-      items: [
-        {
-          title: "General",
-          url: "#",
-        },
-        {
-          title: "Team",
-          url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
-          url: "#",
-        },
-      ],
-    },
-  ],
-  navProjects: [
-    {
-      name: "Design Engineering",
+    }, {
+      title: "Get Started",
       url: "#",
-      icon: Frame,
-    },
-    {
-      name: "Sales & Marketing",
+    }, {
+      title: "Tutorials",
       url: "#",
-      icon: PieChart,
-    },
-    {
-      name: "Travel",
+    }, {
+      title: "Changelog",
       url: "#",
-      icon: Map,
-    },
-  ],
+    }],
+  }, {
+    title: "Settings",
+    url: "#",
+    icon: Settings2,
+    items: [{
+      title: "General",
+      url: "#",
+    }, {
+      title: "Team",
+      url: "#",
+    }, {
+      title: "Billing",
+      url: "#",
+    }, {
+      title: "Limits",
+      url: "#",
+    }],
+  }],
+  navProjects: [{
+    name: "Design Engineering",
+    url: "#",
+    icon: Frame,
+  }, {
+    name: "Sales & Marketing",
+    url: "#",
+    icon: PieChart,
+  }, {
+    name: "Travel",
+    url: "#",
+    icon: Map,
+  }],
 }

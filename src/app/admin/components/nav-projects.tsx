@@ -3,7 +3,6 @@
 import {
   Folder,
   Forward,
-  Link,
   MoreHorizontal,
   Trash2,
 } from "lucide-react"
@@ -25,6 +24,7 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar"
 import { NavProject } from "./layout/types"
+import Link from "next/link"
 
 export function NavProjects({
   projects,
